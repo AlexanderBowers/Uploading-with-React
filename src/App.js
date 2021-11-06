@@ -27,7 +27,7 @@ class App extends Component {
       })
     })
     .then(res => res.json())
-    .then(console.log(res))
+    .then(res => console.log(res))
   }
   
   render() {
