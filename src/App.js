@@ -17,7 +17,17 @@ class App extends Component {
   fileUploadHandler = () => {
     const formData = new FormData()
     formData.append('image', this.state.selectedFile, this.state.selectedFile.name)
-    //axios.post('insertLinkHere', formData) it seems I'd sent my regular post requests from here;
+    fetch('localhost:3000/uploads', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accep:" : "application/json" 
+      }, body: JSON.stringify({
+        image: `${formData}`
+      })
+    })
+    .then(res => res.json())
+    .then(console.log(res))
   }
   
   render() {
