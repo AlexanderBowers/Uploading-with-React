@@ -27,7 +27,8 @@ class App extends Component {
       })
     })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(res => console.log(res)
+    you need to create routes in ruby and generate resource for image uploads)
   }
   
   render() {
